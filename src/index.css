@@ -7,7 +7,7 @@
     margin: 0;
 }
 :root {
-    --primmary-color: #6ffa93;
+    --primmary-color: hsl(136, 70%, 60%);
     --black-color: #000;
     --white-color: #fff;
 }
@@ -20,4 +20,10 @@ body {
     color: var(--white-color);
     background-color: var(--black-color);
     font-family: "Roboto", sans-serif;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }

@@ -1,11 +1,9 @@
 nav.nav {
     position: fixed;
-    width: 100dvw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 0;
     overflow-x: clip;
     z-index: 100;
+    background-color: var(--black-color)
 }
 
 .nav > .wrapper {
@@ -16,7 +14,7 @@ nav.nav {
     align-items: center;
 }
 
-.wrapper::before {
+.nav > .wrapper::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -28,10 +26,10 @@ nav.nav {
     z-index: -1;
 }
 
+
 .wrapper a.nav__heading {
     position: relative;
     width: 70px;
-    p1adding: 1em;
     text-decoration: none;
     color: var(--primmary-color);
     font-size: 1.6rem;
@@ -46,7 +44,7 @@ a.nav__heading::before {
     height: 2px;
     width: 100%;
     background-color: var(--primmary-color);
-    border-radius: 5pxq;
+    border-radius: 5px;
     transform-origin: right;
     transform: scale(0);
     transition: transform 0.3s ease-in-out;
@@ -160,7 +158,9 @@ a.nav__link:hover::before {
     a.nav__link::before {
         height: 2px;
         width: 90%;
-        top: 90%;
+        top: 80%;
+        left: 5%;
+        transition: transform 0.3s ease-in-out;
         transform-origin: right;
     }
 
@@ -172,20 +172,25 @@ a.nav__link:hover::before {
         transform-origin: left;
     }
 
-    .contact-link {
-        background-color: rgba(111, 250, 148, 0.5);
-        transition:
-            background-color 0.3s ease-in-out,
-            transform 0.3s ease-out;
+    a.nav__link.contact-link {
+        background-color: var(--primmary-color);
+   
+        color: var(--black-color);
+        padding: 1em;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     }
 
-    .contact-link:hover {
-        background-color: rgba(111, 250, 148, 0.8);
-        transform: scale(1.1);
+    a.nav__link.contact-link:hover {
+        background-color: hsl(136, 55%, 30%);
         color: white;
     }
 
     li > a.nav__link:hover.contact-link:hover {
         color: white;
+    }
+
+    a.nav__heading > h2 {
+        font-size: 3rem;
+        width: 100px;
     }
 }

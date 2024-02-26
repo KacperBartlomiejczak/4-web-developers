@@ -1,0 +1,154 @@
+.card {
+
+    width: 80%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr repeat(2, auto) 3fr;
+    align-items: center;
+    background-color: #151515;
+    border-radius: 12px;
+    padding: 1em;
+
+
+}
+
+.our-team .wrapper > .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card a {
+    color: var(--primmary-color);
+    transition: color .3s;
+}
+
+.card a:hover {
+    color: hsl(136, 45%, 44%);
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    grid-row: 2/3;
+    grid-column: 1/4;
+    padding: 0.5em;
+}
+
+.links a > ion-icon {
+    font-size: 1.6em;
+
+
+}
+
+.links .mail {
+    justify-self: end;
+}
+
+.links .github {
+    margin: 0 1em;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    grid-column: 1/4;
+    justify-self: center;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid hsl(136, 70%, 60%);
+    margin-bottom: 0.5em;
+}
+
+.card h3 {
+    font-size: 1.6rem;
+    grid-row: 3/4;
+    grid-column: 1/4;
+    text-align: center;
+    color: var(--primmary-color);
+}
+
+.card p {
+    grid-column: 1/4;
+    text-align: center;
+    width: 80%;
+    justify-self: center;
+    font-size: 1.2rem;
+    line-height: 20px;
+    padding: 0.5em 0;
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 92%;
+        height: 270px;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 2fr 1fr;
+    }
+
+    .links {
+        grid-row: 4/5;
+        grid-column: 1/2;
+        align-self: start;
+    }
+
+    .card img {
+        width: 150px;
+        height: 150px;
+        grid-row: 1/4;
+        grid-column: 1/2;
+    }
+
+    .card h3 {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        justify-self: start;
+        font-size: 2.3rem;
+
+    }
+
+    .card p {
+        grid-column: 2/3;
+        grid-row: 3/5;
+        text-align: left;
+        justify-self: start;
+        align-self: start;
+        font-size: 1.3rem;
+        line-height: 23px;
+        width: 90%;
+    }
+
+    .links a > ion-icon {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: 80%;
+        height: 300px;
+
+    }
+
+    .card img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .card h3 {
+        font-size: 2.5rem;
+    }
+
+    .card p {
+        font-size: 1.5rem;
+        line-height: 25px;
+    }
+
+    .links a > ion-icon {
+        font-size: 2rem;
+    }
+}
