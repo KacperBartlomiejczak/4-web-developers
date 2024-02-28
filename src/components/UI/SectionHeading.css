@@ -1,11 +1,15 @@
 .section-heading {
     padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
 }
 
 .section-heading > h2 {
     font-size: 2.5rem;
     font-family: "Poppins", sans-serif;
-
     text-transform: capitalize;
 
 }
@@ -16,26 +20,4 @@
     text-transform: capitalize;
 }
 
-@media (min-width: 768px) {
-    .section-heading {
-        padding: 3em;
-    }
 
-    .section-heading > p {
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .section-heading {
-        padding: 4em;
-    }
-
-    .section-heading > h2 {
-        font-size: 3rem;
-    }
-
-    .section-heading > p {
-        font-size: 1.7rem;
-    }
-}
